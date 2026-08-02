@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: registry search APIs (registry.npmjs.org, pypi.org, search.maven.org, azuresearch-usnc.nuget.org, rubygems.org, crates.io)
+notes: >-
+  One first-party client library survives in public registries as of
+  2026-07-21: the ai.upollo:upollo-android AAR on Maven Central (last
+  published 2022-12-15). No other first-party packages were found in the
+  registries checked (npm search API, direct npm lookups, PyPI, NuGet,
+  RubyGems, crates.io). Direct lookups for @upollo/web and upollo on npm
+  return 404, and pypi.org/pypi/upollo returns 404. The github.com/upollo
+  organization exists but has no public repositories, and Upollo's primary
+  domain upollo.ai no longer resolves (no A/NS/SOA/MX records), so the SDK
+  documentation that previously lived there is unavailable. The remaining
+  registry hits are third-party integration connectors, listed below.
+packages:
+- language: kotlin/java (android)
+  registry: maven-central
+  name: ai.upollo:upollo-android
+  url: https://central.sonatype.com/artifact/ai.upollo/upollo-android
+  install: 'implementation "ai.upollo:upollo-android:0.1.3"'
+  official: true
+  latest_version: 0.1.3
+  packaging: aar
+  last_publish: '2022-12-15'
+third_party:
+- language: javascript
+  registry: npm
+  name: '@segment/analytics-browser-actions-upollo'
+  url: https://www.npmjs.com/package/@segment/analytics-browser-actions-upollo
+  official: false
+  publisher: Segment (Twilio)
+  last_publish: '2025-08-19'
+  notes: Segment Analytics browser destination action for Upollo.
+- language: javascript
+  registry: npm
+  name: '@pipedream/upollo'
+  url: https://www.npmjs.com/package/@pipedream/upollo
+  official: false
+  publisher: Pipedream
+  last_publish: '2023-10-25'
+  notes: Pipedream integration components for the Upollo API.
